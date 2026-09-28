@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- 5. Phần tử meta mô tả thông tin bổ sung và mã hoá UTF-8 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tổng hợp bài học về cấu trúc cơ bản của một tệp HTML">
+    <meta name="author" content="Bài học Tin Học">
+    
+    <!-- 6. Phần tử title mô tả tên trang web (không chứa phần tử con) -->
+    <title>Bài Học: Cấu Trúc Cơ Bản Của Tệp HTML</title>
+
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f4f6f9; 
+            color: #333; 
+            display: flex;
+        }
+        
+        /* Thanh menu điều hướng bên trái */
+        aside {
+            width: 280px;
+            background-color: #2c3e50;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        aside h2 {
+            color: #ecf0f1;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #34495e;
+            padding-bottom: 10px;
+            margin-top: 10px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        aside li { margin-bottom: 12px; }
+        aside a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        aside a:hover {
+            background-color: #34495e;
+            color: white;
+            padding-left: 18px;
+        }
+
+        /* Vùng nội dung chính bên phải */
+        main {
+            margin-left: 280px;
+            padding: 40px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Khung nội dung cho từng trang/phần bài học */
+        .page-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            scroll-margin-top: 40px; /* Tạo khoảng trống khi bấm menu cuộn đến */
+        }
+
+        /* Định dạng các thẻ tiêu đề h1, h2, h3 */
+        h1 { color: #2980b9; border-bottom: 3px solid #2980b9; padding-bottom: 10px; margin-top: 0; }
+        h2 { color: #16a085; margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h3 { color: #d35400; margin-top: 20px; }
+        
+        /* Định dạng các thành phần văn bản khác */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        code { background: #f8f9fa; border: 1px solid #e1e4e6; padding: 2px 6px; border-radius: 4px; font-family: Consolas, monospace; color: #c0392b; font-size: 0.95em; }
+        .highlight { font-weight: bold; color: #27ae60; }
+        
+        /* Hộp lưu ý đặc biệt */
+        .note-box {
+            background-color: #fff9db;
+            border-left: 5px solid #fab005;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .tree-summary {
+            background-color: #e8f4fd;
+            border-left: 5px solid #3498db;
+            padding: 15px 20px;
+            font-style: italic;
+            margin-top: 25px;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Thanh mục lục điều hướng nhanh -->
+    <aside>
+        <h2>Mục Lục Bài Học</h2>
+        <ul>
+            <li><a href="#trang1">Trang 1: Tổng quan & Quan hệ</a></li>
+            <li><a href="#trang2">Trang 2: Các phần tử chính</a></li>
+            <li><a href="#trang3">Trang 3: Định dạng & Lưu ý</a></li>
+        </ul>
+    </aside>
+
+    <!-- Nội dung chi tiết của bài học -->
+    <main>
+        <h1>2/ CẤU TRÚC CƠ BẢN CỦA MỘT TỆP HTML</h1>
+
+        <!-- ================= TRANG 1 ================= -->
+        <section id="trang1" class="page-section">
+            <h1>Trang 1: Tổng quan & Quan hệ hình cây</h1>
+            
+            <h2>Tổng quan về phần tử HTML</h2>
+            <!-- Thẻ p mô tả một đoạn văn bản hoàn chỉnh -->
+            <p>Mỗi tệp HTML bao gồm nhiều phần tử HTML, các phần tử HTML có thể <span class="highlight">lồng nhau</span>.</p>
+            
+            <h2>Quan hệ lồng nhau giữa các thẻ</h2>
+            <p>Quan hệ lồng nhau giữa các phần tử HTML có thể hình dung như quan hệ <strong>cha – con</strong> hay quan hệ giữa các nút của một sơ đồ hình cây.</p>
+            
+            <div class="tree-summary">
+                <strong>Tóm lại:</strong> Cấu trúc chung của một trang web có thể hình dung như một cây thông tin các phần tử HTML có quan hệ cha con (lồng nhau), nút gốc (root) là phần tử HTML.
+            </div>
+        </section>
+
+
+        <!-- ================= TRANG 2 ================= -->
+        <section id="trang2" class="page-section">
+            <h1>Trang 2: Các phần tử cốt lõi</h1>
+            
+            <h3>1. Dòng khai báo đầu tiên</h3>
+            <p>Dòng đầu tiên, <code>&lt;!DOCTYPE html&gt;</code> có thể coi là dòng khai báo html của tệp.</p>
+
+            <h3>2. Phần tử <code>&lt;html&gt;</code></h3>
+            <ul>
+                <li>Là bắt buộc, là phần tử gốc và chứa tất cả các phần tử HTML còn lại của trang web.</li>
+                <li>Là phần tử gốc (root) trong sơ đồ hình cây HTML.</li>
+                <li>Thường chứa hai phần tử con bao gồm <code>&lt;head&gt;</code> và <code>&lt;body&gt;</code>.</li>
+            </ul>
+
+            <h3>3. Phần tử <code>&lt;head&gt;</code></h3>
+            <ul>
+                <li>Chứa các phần tử có liên quan chung đến toàn bộ trang web.</li>
+                <li>Trong <code>&lt;head&gt;</code> thường có phần tử <code>&lt;title&gt;</code> và một số phần tử khác như <code>&lt;meta&gt;</code>, <code>&lt;style&gt;</code> và <code>&lt;script&gt;</code>.</li>
+            </ul>
+
+            <h3>4. Phần tử <code>&lt;body&gt;</code></h3>
+            <p>Chứa tất cả các phần tử còn lại là thông tin (nội dung trực quan) của trang web.</p>
+        </section>
+
+
+        <!-- ================= TRANG 3 ================= -->
+        <section id="trang3" class="page-section">
+            <h1>Trang 3: Chi tiết định dạng văn bản & Lưu ý</h1>
+            
+            <h2>5. Phần tử <code>&lt;meta&gt;</code></h2>
+            <p>Nằm bên trong phần tử <code>&lt;head&gt;</code>. Có nhiệm vụ mô tả các thông tin bổ sung của trang web như cách mã hoá Unicode, từ khoá dùng để tìm kiếm trang, tên tác giả trang web.</p>
+            <p><em>Ví dụ (Hình 7.3):</em> Khai báo <code>&lt;meta charset="UTF-8"&gt;</code> mô tả cách mã hoá văn bản trên trang web theo mã UTF-8 giúp hiển thị đúng ký tự tiếng Việt.</p>
+
+            <h2>6. Phần tử <code>&lt;title&gt;</code></h2>
+            <p>Nằm bên trong phần tử <code>&lt;head&gt;</code>. Mô tả tên của trang web hiện thời (hiển thị trên tab trình duyệt). Lưu ý: Phải là văn bản thường và không được phép chứa các phần tử con bên trong nó.</p>
+
+            <h2>7. Nhóm các thẻ định dạng văn bản thường dùng</h2>
+            <p>Các thẻ tiêu đề theo thứ tự giảm cấp dần (kích thước lớn đến nhỏ) là: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code>.</p>
+            <p>Thẻ <code>&lt;p&gt;</code> dùng để mô tả một đoạn văn bản hoàn chỉnh.</p>
+
+            <div class="note-box">
+                <strong>Lưu ý quan trọng:</strong> HTML không nhận biết kí tự xuống dòng (khi nhấn phím Enter trên bàn phím) để kết thúc đoạn văn bản (paragraph) như các phần mềm soạn thảo văn bản thông thường. Để xuống dòng hay ngắt đoạn, bạn bắt buộc phải dùng các thẻ cấu trúc như <code>&lt;p&gt;</code> hoặc thẻ ngắt dòng <code>&lt;br&gt;</code>.
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
